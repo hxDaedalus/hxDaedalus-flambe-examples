@@ -6,7 +6,6 @@ import flambe.Entity;
 import flambe.input.MouseEvent;
 import flambe.input.PointerEvent;
 import flambe.System;
-import haxe.Timer;
 
 import hxDaedalus.ai.EntityAI;
 import hxDaedalus.ai.PathFinder;
@@ -41,10 +40,6 @@ class Main extends Component
     {
         // Wind up all platform-specific stuff
         System.init();
-		
-		System.uncaughtError.connect(function (s:String) {
-			log(s);
-		});
 		
 		System.root.addChild(new Entity().add(new Main()));
     }
@@ -102,11 +97,6 @@ class Main extends Component
         }  
 		
 		// show result mesh on screen  
-        log(_mesh == null);
-        log(meshGraphics.owner == null);
-        log(meshView == null);
-        log(meshView.graphics == null);
-	    log(meshEntity.firstComponent == null);
 		meshView.drawMesh(_mesh);
 		
         // we need an entity
@@ -138,28 +128,15 @@ class Main extends Component
 	override public function onAdded() {
 		super.onAdded();
 		
-		log("added");
-
-		log("pointer supported: " + System.pointer.supported);
 		System.pointer.down.connect(onPointerDown);
 		System.pointer.up.connect(onPointerUp);
 	}
 	
-	static public function log(x:Dynamic):Void {
-	#if flash
-		flash.external.ExternalInterface.call("console.log", x);
-	#else
-		trace(x);
-	#end
-	}
-	
 	public function onPointerDown(e:PointerEvent):Void {
-		log("down @" + System.pointer.x + "," + System.pointer.y);
 		_newPath = true;
 	}
 	
 	public function onPointerUp(e:PointerEvent):Void {
-		log("up");
 		_newPath = false;
 	}
 	
