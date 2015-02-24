@@ -53,14 +53,8 @@ class Main extends Component
 	public function new()
     {
 		super();
-	}
-	
-	override public function onAdded() {
-		super.onAdded();
-		
-		log("added");
-
-        // Add a solid color background
+        
+		// Add a solid color background
 		var background = System.root.addChild(new Entity()
 			.add(new FillSprite(0xffffff, System.stage.width, System.stage.height).setXY(0, 0)));
 		
@@ -139,10 +133,16 @@ class Main extends Component
         _pathSampler.entity = _entityAI;
         _pathSampler.samplingDistance = 10;
         _pathSampler.path = _path;
+	}
+	
+	override public function onAdded() {
+		super.onAdded();
+		
+		log("added");
 
 		log("pointer supported: " + System.pointer.supported);
 		System.pointer.down.connect(onPointerDown);
-		System.pointer.down.connect(onPointerUp);
+		System.pointer.up.connect(onPointerUp);
 	}
 	
 	static public function log(x:Dynamic):Void {
@@ -154,7 +154,7 @@ class Main extends Component
 	}
 	
 	public function onPointerDown(e:PointerEvent):Void {
-		log("down");
+		log("down @" + System.pointer.x + "," + System.pointer.y);
 		_newPath = true;
 	}
 	
@@ -166,9 +166,9 @@ class Main extends Component
 	override public function onUpdate(dt:Float) {
 		super.onUpdate(dt);
 		
-		if (_newPath) _view.graphics.clear();
-
         if ( _newPath ) {
+			_view.graphics.clear();
+			
             // find path !
             _pathfinder.findPath( System.pointer.x, System.pointer.y, _path );
             
@@ -177,15 +177,18 @@ class Main extends Component
             
 			// reset the path sampler to manage new generated path
             _pathSampler.reset();
+			
+			// show entity position on screen
+			_view.drawEntity(_entityAI);
         }
         
         // animate !
         if ( _pathSampler.hasNext ) {
             // move entity
-            _pathSampler.next();            
+            _pathSampler.next();      
+			
+			// show entity position on screen
+			_view.drawEntity(_entityAI);
         }
-		
-		// show entity position on screen
-		_view.drawEntity(_entityAI);
 	}
 }
