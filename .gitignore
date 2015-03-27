@@ -1,5 +1,5 @@
 # Build and Release Folders
-bin/
+build/
 
 # Other files and folders
 .settings/
