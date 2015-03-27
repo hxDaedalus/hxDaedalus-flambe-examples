@@ -13,8 +13,8 @@ https://github.com/hxDaedalus/hxDaedalus
 
 You can view some of the examples:
 
- - 01-Basics: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/01-Basics/build/web/index.html)
- - 02-FromBitmap: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/index.html)
- - 03-Pathfinding: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/03-Pathfinding/build/web/index.html)
+ - 01-Basics: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/01-Basics/build/web/index.html?flambe=html) | [flash](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/01-Basics/build/web/index.html?flambe=flash)
+ - 02-FromBitmap: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/index.html?flambe=html) | [flash](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/index.html?flambe=flash)
+ - 03-Pathfinding: [html](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/03-Pathfinding/build/web/index.html?flambe=html) | [flash](http://hxdaedalus.github.io/hxDaedalus-flambe-examples/hxDaedalus-Flambe-Examples/03-Pathfinding/build/web/index.html?flambe=flash)
  
 License is MIT.
