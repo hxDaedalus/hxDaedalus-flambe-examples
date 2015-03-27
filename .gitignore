@@ -17,6 +17,7 @@
 !hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/*.*
 !hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/targets/*.*
 !hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/*.*
+!hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/images/*.*
 
 !hxDaedalus-Flambe-Examples/03-Pathfinding/build/web/*.*
 !hxDaedalus-Flambe-Examples/03-Pathfinding/build/web/targets/*.*
@@ -32,5 +33,5 @@
 
 !hxDaedalus-Flambe-Examples/06-Multilayer/build/web/*.*
 !hxDaedalus-Flambe-Examples/06-Multilayer/build/web/targets/*.*
-!hxDaedalus-Flambe-Examples/06-Multilayer/build/web/assets/*.*
-
+!hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/*.*
+!hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/images/*.*
