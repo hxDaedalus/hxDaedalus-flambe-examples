@@ -26,6 +26,7 @@
 !hxDaedalus-Flambe-Examples/04-BitmapPathfinding/build/web/*.*
 !hxDaedalus-Flambe-Examples/04-BitmapPathfinding/build/web/targets/*.*
 !hxDaedalus-Flambe-Examples/04-BitmapPathfinding/build/web/assets/*.*
+!hxDaedalus-Flambe-Examples/04-BitmapPathfinding/build/web/assets/images/*.*
 
 !hxDaedalus-Flambe-Examples/05-GridMaze/build/web/*.*
 !hxDaedalus-Flambe-Examples/05-GridMaze/build/web/targets/*.*
@@ -33,5 +34,5 @@
 
 !hxDaedalus-Flambe-Examples/06-Multilayer/build/web/*.*
 !hxDaedalus-Flambe-Examples/06-Multilayer/build/web/targets/*.*
-!hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/*.*
-!hxDaedalus-Flambe-Examples/02-FromBitmap/build/web/assets/images/*.*
+!hxDaedalus-Flambe-Examples/06-Multilayer/build/web/assets/*.*
+!hxDaedalus-Flambe-Examples/06-Multilayer/build/web/assets/images/*.*
