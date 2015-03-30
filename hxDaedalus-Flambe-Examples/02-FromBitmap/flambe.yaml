@@ -1,17 +1,17 @@
 # Basic information about the game.
 name: FromBitmap
-description: A short one-line description.
+description: Example for the hxDaedalus lib.
 
 # Information about the game developer.
 developer:
   name: hxDaedalus
-  url: https://github.com/Justinfront/hxDaedalus
+  url: https://github.com/hxDaedalus/hxDaedalus
 
 # The game's unique identifier.
-id: com.yourdomain.yourgame
+id: lib.hxDaedalus.examples
 
 # The game's version string.
-version: 1.0.0
+version: 0.0.3
 
 # The main class name.
 main: Main
