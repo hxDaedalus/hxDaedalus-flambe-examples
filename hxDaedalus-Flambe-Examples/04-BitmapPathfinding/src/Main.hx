@@ -7,11 +7,10 @@ import flambe.display.ImageSprite;
 import flambe.Entity;
 import flambe.input.PointerEvent;
 import flambe.System;
+
 import hxDaedalus.ai.EntityAI;
 import hxDaedalus.ai.PathFinder;
 import hxDaedalus.ai.trajectory.LinearPathSampler;
-import hxDaedalus.graphics.Pixels;
-
 import hxDaedalus.factories.BitmapObject;
 import hxDaedalus.data.ConstraintSegment;
 import hxDaedalus.data.ConstraintShape;
@@ -19,8 +18,8 @@ import hxDaedalus.data.Mesh;
 import hxDaedalus.data.Object;
 import hxDaedalus.data.Vertex;
 import hxDaedalus.factories.RectMesh;
-import hxDaedalus.graphics.flambe.GraphicsComponent;
-import hxDaedalus.graphics.SimpleDrawingContext;
+import wings.core.TargetCanvas;
+import wings.core.SimpleDrawingContext;
 import hxDaedalus.view.SimpleView;
 
 
@@ -50,7 +49,6 @@ class Main extends Component
     
     public function new()
     {
-		super();
 		
 		var loader = System.loadAssetPack(Manifest.fromAssets("images"));
 		loader.get(onLoaded);
@@ -68,11 +66,11 @@ class Main extends Component
 		System.root.addChild(new Entity().add(image));
 		
 		// add viewports
-		var meshGraphics = new GraphicsComponent();
+		var meshGraphics = new TargetCanvas();
 		_meshView = new SimpleView(meshGraphics);
 		System.root.addChild(new Entity().add(meshGraphics));
 
-		var pathGraphics = new GraphicsComponent();
+		var pathGraphics = new TargetCanvas();
 		_pathView = new SimpleView(pathGraphics);
 		System.root.addChild(new Entity().add(pathGraphics));
 

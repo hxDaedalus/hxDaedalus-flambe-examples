@@ -14,8 +14,8 @@ import hxDaedalus.data.Mesh;
 import hxDaedalus.data.Object;
 import hxDaedalus.data.Vertex;
 import hxDaedalus.factories.RectMesh;
-import hxDaedalus.graphics.flambe.GraphicsComponent;
-import hxDaedalus.graphics.SimpleDrawingContext;
+import wings.core.TargetCanvas;
+import wings.core.SimpleDrawingContext;
 import hxDaedalus.view.SimpleView;
 
 
@@ -36,7 +36,6 @@ class Main extends Component
     
     public function new()
     {
-		super();
 		
 		var loader = System.loadAssetPack(Manifest.fromAssets("images"));
 		loader.get(onLoaded);
@@ -57,7 +56,7 @@ class Main extends Component
 		background.addChild(new Entity().add(image));
         
         // create a viewport
-		var g = new GraphicsComponent();
+		var g = new TargetCanvas();
 		_view = new SimpleView(g);
 		background.addChild(new Entity().add(g));
         

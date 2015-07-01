@@ -10,8 +10,8 @@ import hxDaedalus.data.Mesh;
 import hxDaedalus.data.Object;
 import hxDaedalus.data.Vertex;
 import hxDaedalus.factories.RectMesh;
-import hxDaedalus.graphics.flambe.GraphicsComponent;
-import hxDaedalus.graphics.SimpleDrawingContext;
+import wings.core.TargetCanvas;
+import wings.core.SimpleDrawingContext;
 import hxDaedalus.view.SimpleView;
 
 
@@ -31,9 +31,7 @@ class Main extends Component
     }
     
     public function new()
-    {
-		super();
-		
+    {		
         // Add a solid color background, and ourself so we can override onUpdate()
         var background = System.root.addChild(new Entity()
 			.add(new FillSprite(0xffffff, System.stage.width, System.stage.height).setXY(0, 0))
@@ -45,7 +43,7 @@ class Main extends Component
         
 		
         // create a viewport
-		var g = new GraphicsComponent();
+		var g = new TargetCanvas();
 		_view = new SimpleView(g);
 		background.addChild(new Entity().add(g));
         

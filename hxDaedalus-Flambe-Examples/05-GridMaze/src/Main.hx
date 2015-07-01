@@ -19,8 +19,8 @@ import hxDaedalus.data.Mesh;
 import hxDaedalus.data.Object;
 import hxDaedalus.data.Vertex;
 import hxDaedalus.factories.RectMesh;
-import hxDaedalus.graphics.flambe.GraphicsComponent;
-import hxDaedalus.graphics.SimpleDrawingContext;
+import wings.core.TargetCanvas;
+import wings.core.SimpleDrawingContext;
 import hxDaedalus.view.SimpleView;
 
 
@@ -54,18 +54,17 @@ class Main extends Component
 
 	public function new()
     {
-		super();
         
 		// Add a solid color background
 		var background = System.root.addChild(new Entity()
 			.add(new FillSprite(0xffffff, System.stage.width, System.stage.height).setXY(0, 0)));
 		
 		// add viewports
-		var meshGraphics = new GraphicsComponent();
+		var meshGraphics = new TargetCanvas();
 		meshView = new SimpleView(meshGraphics);
 		System.root.addChild(new Entity().add(meshGraphics));
 
-		var pathGraphics = new GraphicsComponent();
+		var pathGraphics = new TargetCanvas();
 		pathView = new SimpleView(pathGraphics);
 		System.root.addChild(new Entity().add(pathGraphics));
 		
